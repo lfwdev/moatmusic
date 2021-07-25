@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mb-5 text-center text-md-left">
             <div class="col-md-3 col-lg-4 mb-3">
-                <a class="logo" href="#">moatmusic</a>
+                <a class="logo" href="#"><i class="fab fa-fort-awesome-alt"></i> moatmusic</a>
             </div>
             <div class="col-md-3 offset-lg-2 col-lg-2 pt-2">
                 <ul class="nav-footer">

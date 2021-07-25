@@ -15,27 +15,24 @@
         <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-mail') }}</label>
 
         <div class="col-md-6">
-            <input id="email" type="email" class="form-control-custom @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-            @error('email')
-                <span class="invalid-feedback" role="alert">
+            <input id="email" type="email" class="form-control form-control-custom @error('email','default') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            <div class="invalid-feedback">
+                @error('email','default')
                     <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+                @enderror
+            </div>
         </div>
     </div>
-
     <div class="form-group row">
         <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
         <div class="col-md-6">
-            <input id="password" type="password" class="form-control-custom @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-            @error('password')
-                <span class="invalid-feedback" role="alert">
+            <input id="password" type="password" class="form-control form-control-custom @error('password','default') is-invalid @enderror" name="password" required autocomplete="current-password">
+            <div class="invalid-feedback" role="alert">
+                @error('password','default')
                     <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+                @enderror
+            </div>
         </div>
     </div>
 

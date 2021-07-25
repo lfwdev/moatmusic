@@ -44,7 +44,7 @@
 @endsection
 {{-- Scripts --}}
 @section('nonBlockingJS')
-    <script type="text/javascript" defer>
+    <script type="text/javascript">
         window.addEventListener("load", function(){ document.getElementById('loader').style.display = 'none';  $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });});
     </script>
 @endsection

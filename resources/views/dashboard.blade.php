@@ -7,6 +7,7 @@
                 <div class="col">
                     DASHBOARD
                 </div>
+                @dump($content ?? 'no content')
             </div>
         </div>
     </section>

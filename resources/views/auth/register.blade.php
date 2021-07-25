@@ -13,9 +13,9 @@
     <div class="form-group row">
         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
         <div class="col-md-6">
-            <input id="name" type="text" class="form-control-custom @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            <input id="name" type="text" class="form-control form-control-custom @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-            @error('name')
+            @error('name','default')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
@@ -26,9 +26,9 @@
         <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-mail') }}</label>
 
         <div class="col-md-6">
-            <input id="email" type="email" class="form-control-custom @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+            <input id="email" type="email" class="form-control form-control-custom @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-            @error('email')
+            @error('email','default')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
@@ -39,9 +39,9 @@
         <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
         <div class="col-md-6">
-            <input id="password" type="password" class="form-control-custom @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+            <input id="password" type="password" class="form-control form-control-custom @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-            @error('password')
+            @error('password','default')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
@@ -52,7 +52,7 @@
         <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
         <div class="col-md-6">
-            <input id="password-confirm" type="password" class="form-control-custom" name="password_confirmation" required autocomplete="new-password">
+            <input id="password-confirm" type="password" class="form-control form-control-custom" name="password_confirmation" required autocomplete="new-password">
         </div>
     </div>
     {{-- RECAPTCHA --}}
