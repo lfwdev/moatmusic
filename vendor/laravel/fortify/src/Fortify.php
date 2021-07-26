@@ -52,7 +52,7 @@ class Fortify
      */
     public static function username()
     {
-        return config('fortify.username', 'email');
+        return config('fortify.username', 'username');
     }
 
     /**
@@ -62,7 +62,7 @@ class Fortify
      */
     public static function email()
     {
-        return config('fortify.email', 'email');
+        return config('fortify.email', 'username');
     }
 
     /**
