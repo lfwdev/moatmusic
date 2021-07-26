@@ -31,7 +31,7 @@ class Artists extends Moat
         return json_decode(strtr($this->fetch(),['}]' => '}', '[{' => '{']));
     }
 
-    public function fetchDataLinkById($id) {
-        return  Http::withHeaders( $this->headers )->get( $this->uri . '?id=' . $id)->object();
+    public function fetchArtistById($id) {
+        return $this->artists[array_search($id, array_column($this->artists, 'id'))];
     }
 }

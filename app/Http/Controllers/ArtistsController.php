@@ -17,7 +17,7 @@ class ArtistsController extends Controller
     public function index($id = false)
     {
         return ((!$id == false) ?
-            view('artist',['artist' => (new Moat\Artists())->fetchDataLinkById($id)]) :
+            view('artist',['artist' => (new Moat\Artists())->fetchArtistById($id)]) :
             view('artists',['artists' => (new Moat\Artists())->getArtists()])
         );
     }

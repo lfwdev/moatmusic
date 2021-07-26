@@ -14,17 +14,26 @@
                         <a class="nav-link text-uppercase" href="{{ route('home').'/#about' }}"><small>About</small></a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary pill-btn" href="{{ route('dashboard') }}">Sign-in <em class="fa fa-sign-in"></em></a>
+                        <a class="btn btn-primary pill-btn" href="{{ route('register') }}">Sign-up <em class="fa fa-user-plus"></em></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ route('login')  }}"><small>Sign-in <em class="fa fa-sign-in"></em></small></a>
                     </li>
                 @else
-                <li class="nav-item">
-                    <a class="btn btn-outline-secondary pill-btn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Sign-out <em class="fa fa-sign-out"></em>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                            @csrf
-                        </form>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ route('albums') }}"><small>Albums <em class="fa fa-compact-disc"></em></small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-secondary pill-btn" href="{{ route('artists') }}">Artists <em class="fa fa-users"></em></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <small>Sign-out <em class="fa fa-sign-out"></em></small>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
+                        </a>
+                    </li>
                 @endguest
             </ul>
         </div>
