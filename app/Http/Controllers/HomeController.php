@@ -17,6 +17,6 @@ class HomeController extends Controller
     //
     public function index()
     {
-        return view('dashboard',['content' => (new Moat\Artists())->asArray()]);
+        return redirect('/artists');
     }
 }

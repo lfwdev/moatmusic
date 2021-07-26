@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArtistsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/artists/{id?}', [ArtistsController::class, 'index'])->name('artists')->whereNumber('id');
 
 // ARTISAN
 Route::get('/clean', function() {
