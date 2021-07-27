@@ -21,7 +21,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" href="{{ route('albums') }}"><small>Albums <em class="fa fa-compact-disc"></em></small></a>
+                        <a class="nav-link text-uppercase" href="{{ route('albums.index') }}"><small>Albums <em class="fa fa-compact-disc"></em></small></a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-secondary pill-btn" href="{{ route('artists') }}">Artists <em class="fa fa-users"></em></a>

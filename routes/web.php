@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArtistsController;
+use App\Http\Controllers\AlbumsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/artists/{id?}', [ArtistsController::class, 'index'])->name('artists')->whereNumber('id');
-
+Route::resource('albums', AlbumsController::class);
 // ARTISAN
 Route::get('/clean', function() {
     Artisan::call('optimize:clear');
