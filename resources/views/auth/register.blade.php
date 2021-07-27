@@ -55,6 +55,17 @@
             <input id="password-confirm" type="password" class="form-control form-control-custom" name="password_confirmation" required autocomplete="new-password">
         </div>
     </div>
+    <div class="form-group row">
+        <div class="col-md-6 offset-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="admin" id="admin" {{ old('admin') ? 'checked' : '' }}>
+
+                <label class="form-check-label" for="admin">
+                    {{ __('Make me Admin') }}
+                </label>
+            </div>
+        </div>
+    </div>
     {{-- RECAPTCHA --}}
     {{--@component('m.bv4.forms.recaptcha')--}}
     {{--@endcomponent--}}
