@@ -11,8 +11,21 @@ body {
   background-color: #1c1c1c;
   color: #46484a; }
 
-a {
+.btn-link, a {
   color: #3f51b5; }
+
+a.text-muted:hover,
+a .text-muted:hover,
+a.text-white:hover,
+a .text-white:hover,
+a:hover, .btn-link:hover {
+    color: #e27fcb !important;
+    text-decoration: none;
+}
+
+#artist .card-footer .btn-link {
+    color: #454854;
+}
 
 h1 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -388,3 +401,40 @@ footer .social li a:hover {
     padding: 0;
     display: flex;
     justify-content: center; } }
+
+.bootstrap-select .btn-light {
+    color: #ffffff !important;
+    background-color: #1d1e23 !important;
+    border-color: #1d1e23 !important;
+}
+
+.bootstrap-select .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show > .btn-light.dropdown-toggle {
+    color: #ffffff !important;
+    background-color: #3f51b5 !important;
+    border-color: #3f51b5 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #3f51b5 !important;
+}
+
+.bootstrap-select .dropdown-toggle {
+    padding: 0.844rem;
+    padding: 0.844rem;
+}
+.bootstrap-select .dropdown-menu {
+    background-color: #1d1e23 !important;
+}
+
+.bootstrap-select .dropdown-item {
+    color: #ffffff !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #3f51b5 !important;
+}
+
+.bootstrap-select .no-results {
+    background: #1d1e23 !important;
+    color: #FFF !important;
+}

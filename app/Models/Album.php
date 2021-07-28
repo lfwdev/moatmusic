@@ -23,13 +23,10 @@ class Album extends Model
     }
 
     public static function fetchByIdWithArtistName($id) {
-        return Album::with(['artist'])->where('id',$id)->get()->map( function ($collection)
-        {
-            return Album::getAlbumWithArtistNameFromCollection($collection);
-        });
+        return Album::getAlbumWithArtistNameFromCollection(Album::with(['artist'])->find($id));
     }
 
     private static function getAlbumWithArtistNameFromCollection($collection) {
-        return array_merge($collection->only(['id', 'name', 'artist_id']),['artist_name' => $collection['artist']->only(['name'])['name']]);
+        return array_merge($collection->only(['id', 'name','year', 'artist_id']),['artist_name' => $collection['artist']->only(['name'])['name']]);
     }
 }

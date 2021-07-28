@@ -32,7 +32,7 @@ class AlbumsController extends Controller
      */
     public function create()
     {
-        //
+        return  view('albums.new', ['artists' => (new Moat\Artists())->getArtists()]);
     }
 
     /**
@@ -43,7 +43,16 @@ class AlbumsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'year' => 'required',
+            'artist_id' => 'required',
+        ]);
+
+        Album::create($request->all());
+
+        return redirect()->route('albums.index')
+            ->with('success','Album created successfully.');
     }
 
     /**
@@ -65,7 +74,7 @@ class AlbumsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return  view('albums.edit', ['album' => Album::fetchByIdWithArtistName($id), 'artists' => (new Moat\Artists())->getArtists()]);
     }
 
     /**
@@ -77,7 +86,16 @@ class AlbumsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'year' => 'required',
+            'artist_id' => 'required',
+        ]);
+
+        Album::find($id)->update($request->all());
+
+        return redirect()->route('albums.index')
+            ->with('success','Album updated successfully');
     }
 
     /**
@@ -88,6 +106,9 @@ class AlbumsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Album::find($id)->delete();
+
+        return redirect()->route('albums.index')
+            ->with('success','Album deleted successfully');
     }
 }
