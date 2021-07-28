@@ -4,7 +4,7 @@ Simple music collection app using the given API where the selection of artists i
 Any user can edit and add albums, only admins can delete.
 
 
-- To run a clean copy of this project on your local environment
+- To run clean copy of this project on your local environment
 
     ```sh 
         php artisan migrate:fresh 
@@ -14,7 +14,7 @@ Any user can edit and add albums, only admins can delete.
         php artisan db:seed 
     ```
 
-- To run a this project on your local environment
+- To run this project on your local environment
 
     ```sh 
         php artisan serve 
