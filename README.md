@@ -14,7 +14,7 @@ Any user can edit and add albums, only admins can delete.
         php artisan db:seed 
     ```
 
-- To run a this project on your local environment
+- To run this project on your local environment
 
     ```sh 
         php artisan serve 
